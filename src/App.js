@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import SearchBar from './SearchBar/Searchbar';
+import SearchBar from "./components/SearchBar/Searchbar";
 // import SongForm from './components/SongForm/SongForm';
 import SongTable from "./components/SongTable/SongTable";
 import axios from "axios";
@@ -38,7 +38,7 @@ class App extends Component {
         <h1>Search Music Library</h1>
         <SongTable songs={this.state.songs} />
         <hr />
-        {/* <SearchBar /> */}
+        <SearchBar />
       </div>
     );
   }
