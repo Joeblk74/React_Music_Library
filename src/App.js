@@ -35,11 +35,12 @@ class App extends Component {
       <div>
         <h1>Music Library</h1>
         <hr />
-        <h1>Search Music Library</h1>
         <SongTable songs={this.state.songs} />
         <hr />
+        <h1>Search Music Library</h1>
         <SearchBar />
         <hr />
+        <h1>Add A New Song</h1>
         <SongForm />
       </div>
     );

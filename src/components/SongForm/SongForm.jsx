@@ -25,10 +25,29 @@ class SongForm extends Component {
     render() { 
         return (
             <form onSubmit={(event) => this.handleSubmit(event)}>
-                <label>Add New Song</label>
+                <label>Title</label>
                 <input type="text" onChange={this.handleChange} />
+                <br />
+                <br />
+                <label>Artist</label>
+                <input type="text" onChange={this.handleChange} />
+                <br />
+                <br />
+                <label>Album</label>
+                <input type="text" onChange={this.handleChange} />
+                <br />
+                <br />
+                <label>Genre</label>
+                <input type="text" onChange={this.handleChange} />
+                <br />
+                <br />
+                <label>Release Date(if known)</label>
+                <input type="text" onChange={this.handleChange} />
+                <br />
+                <br />
                 <button type="submit">Add Song</button>
             </form>
+            
           );
     }
 }
