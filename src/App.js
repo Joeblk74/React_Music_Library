@@ -16,7 +16,7 @@ class App extends Component {
     this.getAllSongs();
   }
 
-  async getAllSongs() {
+   getAllSongs = async () => {
     console.log("Inside Get ALL Songs")
     try {
       let response = await axios.get("http://127.0.0.1:8000/music/");
@@ -30,15 +30,25 @@ class App extends Component {
     }
   }
 
+deleteSong = async (songId) => {
+  // Make axios DELETE request using song id
+  console.log(songId)
+}
+
+filterSongs = (searchTerm) => {
+  console.log(searchTerm)
+  //filter the state "songs" variable by the search term
+}
+
   render() {
     return (
       <div>
         <h1>Music Library</h1>
         <hr />
-        <SongTable songs={this.state.songs} />
+        <SongTable deleteSongFunction={this.deleteSong} songs={this.state.songs} />
         <hr />
         <h1>Search Music Library</h1>
-        <SearchBar />
+        <SearchBar filterSongs={this.filterSongs} />
         <hr />
         <h1>Add A New Song</h1>
         <SongForm />

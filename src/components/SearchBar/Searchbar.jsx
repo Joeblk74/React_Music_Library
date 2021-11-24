@@ -10,19 +10,19 @@ class SearchBar extends Component {
 
     handleChange = (event) => {
         this.setState({
-            [event.target.search]: event.target.value
+            [event.target.name]: event.target.value
         })
     };
     handleSubmit = (event) => {
         event.preventDefault();
-        alert('Search: {this.state.search}')
+        this.props.filterSongs(this.state.enterSearch)
     };
 
     render() { 
         return (
             <form onSubmit={(event) => this.handleSubmit(event)}>
                 <label>Song Search</label>
-                <input type="text" onChange={this.handleChange} />
+                <input name="enterSearch" type="text" onChange={this.handleChange} value={this.state.enterSearch} />
                 <button type="submit">Search</button>
             </form>
           );

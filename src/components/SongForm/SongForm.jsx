@@ -19,14 +19,14 @@ class SongForm extends Component {
     };
     handleSubmit =(event) => {
         event.preventDefault();
-        alert()
+       // Axios Post Request to reate a new song here
     };
 
     render() { 
         return (
             <form onSubmit={(event) => this.handleSubmit(event)}>
                 <label>Title</label>
-                <input type="text" onChange={this.handleChange} />
+                <input name="songTitle" type="text" onChange={this.handleChange} value={this.state.songTitle} />
                 <br />
                 <br />
                 <label>Artist</label>
@@ -38,11 +38,11 @@ class SongForm extends Component {
                 <br />
                 <br />
                 <label>Genre</label>
-                <input type="text" onChange={this.handleChange} />
+                <input name="songGenre" type="text" onChange={this.handleChange} value={this.state.songGenre} />
                 <br />
                 <br />
                 <label>Release Date(if known)</label>
-                <input type="text" onChange={this.handleChange} />
+                <input name="songReleaseDate" type="text" onChange={this.handleChange} value={this.state.songReleaseDate} />
                 <br />
                 <br />
                 <button type="submit">Add Song</button>
